@@ -93,6 +93,10 @@ $directory = '/foo/bar/baz';
 (new Map)->create($directory);
 ```
 
+Downloading html compiled files from [releases](https://github.com/andrey-helldar/black-or-white-text-color/releases) directory.
+
+By default, attached two files with 17576 and 140608 preview colors.
+
 
 ## License
 
