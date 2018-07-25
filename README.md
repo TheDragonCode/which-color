@@ -73,7 +73,7 @@ return (new Color('#ffffff'))->isBlack(); // returned `TRUE`. 'A black text colo
 Example colors map:
 ![map of colors](https://user-images.githubusercontent.com/10347617/43231090-85dfba92-9073-11e8-9dbc-d2968b5ef1a2.png)
 
-Also in the [src/stubs](src/stubs/map.html) folder of the project you can find the generated file with the color definition example. The file contains previews for 17576 background colors.
+Also in the [releases](https://github.com/andrey-helldar/black-or-white-text-color/releases) section you can find the generated file with the color definition example. The file contains previews for 17576 and 140608 background colors.
 
 You can also generate such a file yourself using class `Helldar\BlackOrWhiteTextColor\Services\Map`:
 
@@ -92,10 +92,6 @@ $directory = '/foo/bar/baz';
 
 (new Map)->create($directory);
 ```
-
-Downloading html compiled files from [releases](https://github.com/andrey-helldar/black-or-white-text-color/releases) directory.
-
-By default, attached two files with 17576 and 140608 preview colors.
 
 
 ## License
