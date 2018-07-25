@@ -64,7 +64,7 @@ return black_is_better_text_color('#fff'); // returned `TRUE`. 'A black text col
 return black_is_better_text_color([0, 0, 0]); // returned `FALSE`. 'A black text color not better for black background'
 return black_is_better_text_color([255, 255, 255]); // returned `TRUE`. 'A black text color is better for white background'
 
-use Helldar\BlackOrWhiteTextColor\Color;
+use Helldar\BlackOrWhiteTextColor\Services\Color;
 
 return (new Color('#000000'))->isWhite(); // returned `TRUE`. 'A white text color is better for black background'
 return (new Color('#ffffff'))->isBlack(); // returned `TRUE`. 'A black text color is better for white background'
@@ -75,10 +75,10 @@ Example colors map:
 
 Also in the [src/stubs](src/stubs/map.html) folder of the project you can find the generated file with the color definition example. The file contains previews for 17576 background colors.
 
-You can also generate such a file yourself using class `Helldar\BlackOrWhiteTextColor\Map`:
+You can also generate such a file yourself using class `Helldar\BlackOrWhiteTextColor\Services\Map`:
 
 ```php
-use Helldar\BlackOrWhiteTextColor\Map;
+use Helldar\BlackOrWhiteTextColor\Services\Map;
 
 (new Map)->create($directory = null);
 ```
