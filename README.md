@@ -5,7 +5,7 @@ A simple helper, helping to determine what color the text will look better over 
 ![black-or-white-text-color](https://user-images.githubusercontent.com/10347617/43231566-9f9cb208-9075-11e8-9143-89b904cc8306.png)
 
 <p align="center">
-    <a href="https://styleci.io/repos/45746985"><img src="https://styleci.io/repos/75637284/shield" alt="StyleCI" /></a>
+    <a href="https://styleci.io/repos/142359733"><img src="https://styleci.io/repos/142359733/shield" alt="StyleCI" /></a>
     <a href="https://packagist.org/packages/andrey-helldar/black-or-white-text-color"><img src="https://img.shields.io/packagist/dt/andrey-helldar/black-or-white-text-color.svg?style=flat-square" alt="Total Downloads" /></a>
     <a href="https://packagist.org/packages/andrey-helldar/black-or-white-text-color"><img src="https://poser.pugx.org/andrey-helldar/black-or-white-text-color/v/stable?format=flat-square" alt="Latest Stable Version" /></a>
     <a href="https://packagist.org/packages/andrey-helldar/black-or-white-text-color"><img src="https://poser.pugx.org/andrey-helldar/black-or-white-text-color/v/unstable?format=flat-square" alt="Latest Unstable Version" /></a>
