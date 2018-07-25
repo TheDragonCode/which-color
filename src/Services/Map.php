@@ -77,7 +77,7 @@ class Map
      */
     private function store($content, $count = 0, $directory = null)
     {
-        $path = $this->strFinish($directory, '/') ?: __DIR__ . '/../stubs/';
+        $path = $directory ? $this->strFinish($directory, '/') : __DIR__ . '/../stubs/';
         $page = file_get_contents($path . 'map.stub');
 
         $content = str_replace(['{{content}}', '{{count}}'], [$content, $count], $page);
