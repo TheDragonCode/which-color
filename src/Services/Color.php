@@ -82,7 +82,6 @@ class Color
             $output += (1 / (1 + abs($sum)));
         }
 
-
         return $output;
     }
 

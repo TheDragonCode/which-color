@@ -45,9 +45,9 @@ class Convert
     public function rgb2hex($rgb = [])
     {
         $f = function ($x) {
-            return str_pad(dechex($x), 2, "0", STR_PAD_LEFT);
+            return str_pad(dechex($x), 2, '0', STR_PAD_LEFT);
         };
 
-        return "#" . implode("", array_map($f, $rgb));
+        return '#' . implode('', array_map($f, $rgb));
     }
 }
