@@ -64,6 +64,10 @@ return black_is_better_text_color('#fff'); // returned `TRUE`. 'A black text col
 return black_is_better_text_color([0, 0, 0]); // returned `FALSE`. 'A black text color not better for black background'
 return black_is_better_text_color([255, 255, 255]); // returned `TRUE`. 'A black text color is better for white background'
 
+// Also available a short function:
+return black_is_better('#000000'); // returned `FALSE`. 'A black text color not better for black background'
+return black_is_better('#ffffff'); // returned `TRUE`. 'A black text color is better for white background'
+
 use Helldar\BlackOrWhiteTextColor\Services\Color;
 
 return (new Color('#000000'))->isWhite(); // returned `TRUE`. 'A white text color is better for black background'
