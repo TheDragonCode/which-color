@@ -15,3 +15,17 @@ if (!function_exists('black_is_better_text_color')) {
         return (new Color($hex))->isBlack();
     }
 }
+
+if (!function_exists('black_is_better')) {
+    /**
+     * This is a short function for calculate color.
+     *
+     * @param string $hex
+     *
+     * @return bool
+     */
+    function black_is_better($hex = '#000000')
+    {
+        return (new Color($hex))->isBlack();
+    }
+}
