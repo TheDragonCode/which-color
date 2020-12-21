@@ -2,37 +2,37 @@
 
 namespace Helldar\BlackOrWhiteTextColor\Tests;
 
-use Helldar\BlackOrWhiteTextColor\Services\Color;
-use PHPUnit\Framework\TestCase;
-
 class ColorTest extends TestCase
 {
     public function testIsBlack()
     {
-        $this->assertTrue((new Color('#000000'))->isWhite(), true);
-        $this->assertTrue((new Color('#0078dc'))->isWhite(), true);
-        $this->assertTrue((new Color('#008c14'))->isWhite(), true);
-        $this->assertTrue((new Color('#002800'))->isWhite(), true);
-        $this->assertTrue((new Color('#280000'))->isWhite(), true);
-        $this->assertTrue((new Color('#8ca000'))->isWhite(), true);
-        $this->assertTrue((new Color('#a01414'))->isWhite(), true);
-        $this->assertTrue((new Color('#a014f0'))->isWhite(), true);
-        $this->assertTrue((new Color('#fa780a'))->isWhite(), true);
-        $this->assertTrue((new Color('#fa6e0a'))->isWhite(), true);
-        $this->assertTrue((new Color('#f00ab4'))->isWhite(), true);
-        $this->assertTrue((new Color('#f01400'))->isWhite(), true);
+        $this->assertTrue($this->resolve('#ffffff')->isBlack());
+        $this->assertTrue($this->resolve('#14f078')->isBlack());
+        $this->assertTrue($this->resolve('#14f028')->isBlack());
+        $this->assertTrue($this->resolve('#14fafa')->isBlack());
+        $this->assertTrue($this->resolve('#faf0fa')->isBlack());
+        $this->assertTrue($this->resolve('#46e61e')->isBlack());
+        $this->assertTrue($this->resolve('#50e6f0')->isBlack());
+        $this->assertTrue($this->resolve('#78a082')->isBlack());
+        $this->assertTrue($this->resolve('#78aa14')->isBlack());
+        $this->assertTrue($this->resolve('#82aa50')->isBlack());
+        $this->assertTrue($this->resolve('#a0d228')->isBlack());
+        $this->assertTrue($this->resolve('#fafa00')->isBlack());
+    }
 
-        $this->assertTrue((new Color('#ffffff'))->isBlack(), true);
-        $this->assertTrue((new Color('#14f078'))->isBlack(), true);
-        $this->assertTrue((new Color('#14f028'))->isBlack(), true);
-        $this->assertTrue((new Color('#14fafa'))->isBlack(), true);
-        $this->assertTrue((new Color('#faf0fa'))->isBlack(), true);
-        $this->assertTrue((new Color('#46e61e'))->isBlack(), true);
-        $this->assertTrue((new Color('#50e6f0'))->isBlack(), true);
-        $this->assertTrue((new Color('#78a082'))->isBlack(), true);
-        $this->assertTrue((new Color('#78aa14'))->isBlack(), true);
-        $this->assertTrue((new Color('#82aa50'))->isBlack(), true);
-        $this->assertTrue((new Color('#a0d228'))->isBlack(), true);
-        $this->assertTrue((new Color('#fafa00'))->isBlack(), true);
+    public function testIsWhite()
+    {
+        $this->assertTrue($this->resolve('#000000')->isWhite());
+        $this->assertTrue($this->resolve('#0078dc')->isWhite());
+        $this->assertTrue($this->resolve('#008c14')->isWhite());
+        $this->assertTrue($this->resolve('#002800')->isWhite());
+        $this->assertTrue($this->resolve('#280000')->isWhite());
+        $this->assertTrue($this->resolve('#8ca000')->isWhite());
+        $this->assertTrue($this->resolve('#a01414')->isWhite());
+        $this->assertTrue($this->resolve('#a014f0')->isWhite());
+        $this->assertTrue($this->resolve('#fa780a')->isWhite());
+        $this->assertTrue($this->resolve('#fa6e0a')->isWhite());
+        $this->assertTrue($this->resolve('#f00ab4')->isWhite());
+        $this->assertTrue($this->resolve('#f01400')->isWhite());
     }
 }

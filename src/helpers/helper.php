@@ -2,11 +2,11 @@
 
 use Helldar\BlackOrWhiteTextColor\Services\Color;
 
-if (!function_exists('black_is_better_text_color')) {
+if (! function_exists('black_is_better_text_color')) {
     /**
      * Will return TRUE if black is better, or FALSE if white.
      *
-     * @param string $hex
+     * @param  string  $hex
      *
      * @return bool
      */
@@ -16,11 +16,11 @@ if (!function_exists('black_is_better_text_color')) {
     }
 }
 
-if (!function_exists('black_is_better')) {
+if (! function_exists('black_is_better')) {
     /**
      * This is a short function for calculate color.
      *
-     * @param string $hex
+     * @param  string  $hex
      *
      * @return bool
      */

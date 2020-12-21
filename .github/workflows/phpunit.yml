@@ -1,0 +1,36 @@
+name: phpunit
+on: [ push ]
+
+jobs:
+    build:
+
+        runs-on: ubuntu-latest
+
+        strategy:
+            fail-fast: true
+            matrix:
+                php: [ "7.1", "7.2", "7.3", "7.4", "8.0" ]
+
+        name: PHP ${{ matrix.php }}
+
+        steps:
+            -   name: Checkout code
+                uses: actions/checkout@v2
+
+            -   name: Setup PHP
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: ${{ matrix.php }}
+                    extensions: curl, mbstring, zip, pcntl, pdo, pdo_sqlite, iconv
+                    coverage: xdebug
+
+            -   name: Composer self update
+                run: composer self-update
+
+            -   name: Install dependencies
+                run: composer update --prefer-dist --no-progress --no-interaction --no-suggest
+
+            -   name: Execute tests
+                run: |
+                    mkdir -p build/logs
+                    vendor/bin/phpunit
