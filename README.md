@@ -12,7 +12,6 @@ A simple helper, helping to determine what color the text will look better over 
     <a href="LICENSE"><img src="https://poser.pugx.org/andrey-helldar/black-or-white-text-color/license?format=flat-square" alt="License" /></a>
 </p>
 
-
 ## Installation
 
 To get the latest version of package, simply require the project using [Composer](https://getcomposer.org):
@@ -47,7 +46,6 @@ Now you can use a `black_is_better_text_color($hex = '#000000')` helper.
 
 The package can be used without any problems without any framework, connecting the necessary files through the function `require`.
 
-
 ## Using
 
 The package helps to determine what color it is better to write text over a monotonous color.
@@ -77,7 +75,8 @@ return (new Color('#ffffff'))->isBlack(); // returned `TRUE`. 'A black text colo
 Example colors map:
 ![map of colors](https://user-images.githubusercontent.com/10347617/43231090-85dfba92-9073-11e8-9dbc-d2968b5ef1a2.png)
 
-Also in the [releases](https://github.com/andrey-helldar/black-or-white-text-color/releases) section you can find the generated file with the color definition example. The file contains previews for 17576 and 140608 background colors.
+Also in the [releases](https://github.com/andrey-helldar/black-or-white-text-color/releases) section you can find the generated file with the color definition
+example. The file contains previews for 17576 and 140608 background colors.
 
 You can also generate such a file yourself using class `Helldar\BlackOrWhiteTextColor\Services\Map`:
 
@@ -96,8 +95,3 @@ $directory = '/foo/bar/baz';
 
 (new Map)->create($directory);
 ```
-
-
-## License
-
-This package is released under the [MIT License](LICENSE).
