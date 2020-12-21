@@ -53,12 +53,7 @@ return (new Color())->of('#000000')->isLight(); // returned `TRUE`. 'A white tex
 return (new Color())->of('#ffffff')->isDark(); // returned `TRUE`. 'A black text color is better for white background'
 ```
 
-Example colors map:
-![map of colors](https://user-images.githubusercontent.com/10347617/43231090-85dfba92-9073-11e8-9dbc-d2968b5ef1a2.png)
-
-
 ### Laravel / Lumen Frameworks
-
 
 Inside Laravel or Lumen applications, you can use the `Color` facade:
 
@@ -73,6 +68,11 @@ $color = Color::of('#ffffff')->isDark();
 $color->isLight(); // returned `TRUE`. 'A dark text color is better for light background'
 $color->isDark(); // returned `TRUE`. 'A light text color is better for dark background'
 ```
+
+## Color map
+
+![map of colors](https://user-images.githubusercontent.com/10347617/43231090-85dfba92-9073-11e8-9dbc-d2968b5ef1a2.png)
+
 
 [badge_build]:          https://img.shields.io/github/workflow/status/andrey-helldar/which-color/phpunit?style=flat-square
 
