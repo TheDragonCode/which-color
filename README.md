@@ -74,22 +74,22 @@ $color->isLight(); // returned `TRUE`. 'A dark text color is better for light ba
 $color->isDark(); // returned `TRUE`. 'A light text color is better for dark background'
 ```
 
-[badge_build]:          https://img.shields.io/github/workflow/status/andrey-helldar/laravel-lang-publisher/phpunit?style=flat-square
+[badge_build]:          https://img.shields.io/github/workflow/status/andrey-helldar/which-color/phpunit?style=flat-square
 
-[badge_downloads]:      https://img.shields.io/packagist/dt/andrey-helldar/laravel-lang-publisher.svg?style=flat-square
+[badge_downloads]:      https://img.shields.io/packagist/dt/andrey-helldar/which-color.svg?style=flat-square
 
-[badge_license]:        https://img.shields.io/packagist/l/andrey-helldar/laravel-lang-publisher.svg?style=flat-square
+[badge_license]:        https://img.shields.io/packagist/l/andrey-helldar/which-color.svg?style=flat-square
 
-[badge_stable]:         https://img.shields.io/github/v/release/andrey-helldar/laravel-lang-publisher?label=stable&style=flat-square
+[badge_stable]:         https://img.shields.io/github/v/release/andrey-helldar/which-color?label=stable&style=flat-square
 
 [badge_styleci]:        https://styleci.io/repos/142359733/shield
 
 [badge_unstable]:       https://img.shields.io/badge/unstable-dev--master-orange?style=flat-square
 
-[link_build]:           https://github.com/andrey-helldar/laravel-lang-publisher/actions
+[link_build]:           https://github.com/andrey-helldar/which-color/actions
 
 [link_license]:         LICENSE
 
-[link_packagist]:       https://packagist.org/packages/andrey-helldar/laravel-lang-publisher
+[link_packagist]:       https://packagist.org/packages/andrey-helldar/which-color
 
 [link_styleci]:         https://github.styleci.io/repos/142359733
