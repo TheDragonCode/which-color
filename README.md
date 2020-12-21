@@ -2,7 +2,9 @@
 
 A simple helper, helping to determine what color the text will look better over a monotonous color.
 
-![which-color](https://user-images.githubusercontent.com/10347617/43231566-9f9cb208-9075-11e8-9143-89b904cc8306.png)
+<p align="center">
+    <img src="/.github/home-page-images/screenshot.png?raw=true" alt="What is the best text color"/>
+</p>
 
 <p align="center">
     <a href="https://styleci.io/repos/142359733"><img src="https://styleci.io/repos/142359733/shield" alt="StyleCI" /></a>
