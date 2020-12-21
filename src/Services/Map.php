@@ -16,11 +16,11 @@ class Map
 
     public function __construct()
     {
-        $this->convert = new Convert;
+        $this->convert = new Convert();
     }
 
     /**
-     * @param null|string $directory
+     * @param string|null $directory
      */
     public function create($directory = null)
     {
