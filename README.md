@@ -83,3 +83,14 @@ $directory = '/foo/bar/baz';
 
 (new Map)->create($directory);
 ```
+
+### Laravel / Lumen Frameworks
+
+Inside Laravel or Lumen applications, you can use the `Color` facade:
+
+```php
+use Helldar\BlackOrWhiteTextColor\Facades\Color;
+
+return Color::isWhite('#000000'); // returned `TRUE`. 'A white text color is better for black background'
+return Color::isBlack('#ffffff'); // returned `TRUE`. 'A black text color is better for white background'
+```
