@@ -30,18 +30,6 @@ Instead, you may of course manually update your require block and run `composer 
 }
 ```
 
-If you don't use auto-discovery in Laravel Framework, add the `ServiceProvider` to the providers array in `config/app.php`:
-
-```php
-Helldar\BlackOrWhiteTextColor\ServiceProvider::class,
-```
-
-You can also publish the config file to change implementations (ie. interface to specific class):
-
-```
-php artisan vendor:publish --provider="Helldar\BlackOrWhiteTextColor\ServiceProvider"
-```
-
 Now you can use a `black_is_better_text_color($hex = '#000000')` helper.
 
 The package can be used without any problems without any framework, connecting the necessary files through the function `require`.
