@@ -1,5 +1,6 @@
 # What is the best text color?
 
+
 A simple helper, helping to determine what color the text will look better over a monotonous color.
 
 <p align="center">
@@ -14,7 +15,17 @@ A simple helper, helping to determine what color the text will look better over 
     <a href="LICENSE"><img src="https://poser.pugx.org/andrey-helldar/which-color/license?format=flat-square" alt="License" /></a>
 </p>
 
+
+[![StyleCI Status][badge_styleci]][link_styleci]
+[![Github Workflow Status][badge_build]][link_build]
+[![Stable Version][badge_stable]][link_packagist]
+[![Unstable Version][badge_unstable]][link_packagist]
+[![Total Downloads][badge_downloads]][link_packagist]
+[![License][badge_license]][link_license]
+
+
 ## Installation
+
 
 To get the latest version of package, simply require the project using [Composer](https://getcomposer.org):
 
@@ -34,7 +45,9 @@ Instead, you may of course manually update your require section and run `compose
 
 The package can be used without any problems without any framework, connecting the necessary files through the function `require`.
 
+
 ## Using
+
 
 The package helps to determine what color it is better to write text over a monotonous color.
 
@@ -51,7 +64,9 @@ return (new Color())->of('#ffffff')->isDark(); // returned `TRUE`. 'A black text
 Example colors map:
 ![map of colors](https://user-images.githubusercontent.com/10347617/43231090-85dfba92-9073-11e8-9dbc-d2968b5ef1a2.png)
 
+
 ### Laravel / Lumen Frameworks
+
 
 Inside Laravel or Lumen applications, you can use the `Color` facade:
 
@@ -66,3 +81,23 @@ $color = Color::of('#ffffff')->isDark();
 $color->isLight(); // returned `TRUE`. 'A dark text color is better for light background'
 $color->isDark(); // returned `TRUE`. 'A light text color is better for dark background'
 ```
+
+[badge_build]:          https://img.shields.io/github/workflow/status/andrey-helldar/laravel-lang-publisher/phpunit?style=flat-square
+
+[badge_downloads]:      https://img.shields.io/packagist/dt/andrey-helldar/laravel-lang-publisher.svg?style=flat-square
+
+[badge_license]:        https://img.shields.io/packagist/l/andrey-helldar/laravel-lang-publisher.svg?style=flat-square
+
+[badge_stable]:         https://img.shields.io/github/v/release/andrey-helldar/laravel-lang-publisher?label=stable&style=flat-square
+
+[badge_styleci]:        https://styleci.io/repos/142359733/shield
+
+[badge_unstable]:       https://img.shields.io/badge/unstable-dev--master-orange?style=flat-square
+
+[link_build]:           https://github.com/andrey-helldar/laravel-lang-publisher/actions
+
+[link_license]:         LICENSE
+
+[link_packagist]:       https://packagist.org/packages/andrey-helldar/laravel-lang-publisher
+
+[link_styleci]:         https://github.styleci.io/repos/142359733
