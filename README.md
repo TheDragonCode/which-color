@@ -7,14 +7,6 @@ A simple helper, helping to determine what color the text will look better over 
     <img src="/.github/home-page-images/screenshot.png?raw=true" alt="What is the best text color"/>
 </p>
 
-<p align="center">
-    <a href="https://styleci.io/repos/142359733"><img src="https://styleci.io/repos/142359733/shield" alt="StyleCI" /></a>
-    <a href="https://packagist.org/packages/andrey-helldar/which-color"><img src="https://img.shields.io/packagist/dt/andrey-helldar/which-color.svg?style=flat-square" alt="Total Downloads" /></a>
-    <a href="https://packagist.org/packages/andrey-helldar/which-color"><img src="https://poser.pugx.org/andrey-helldar/which-color/v/stable?format=flat-square" alt="Latest Stable Version" /></a>
-    <a href="https://packagist.org/packages/andrey-helldar/which-color"><img src="https://poser.pugx.org/andrey-helldar/which-color/v/unstable?format=flat-square" alt="Latest Unstable Version" /></a>
-    <a href="LICENSE"><img src="https://poser.pugx.org/andrey-helldar/which-color/license?format=flat-square" alt="License" /></a>
-</p>
-
 
 [![StyleCI Status][badge_styleci]][link_styleci]
 [![Github Workflow Status][badge_build]][link_build]
