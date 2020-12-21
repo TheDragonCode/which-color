@@ -84,7 +84,7 @@ $color->isDark(); // returned `TRUE`. 'A light text color is better for dark bac
 
 [badge_styleci]:        https://styleci.io/repos/142359733/shield
 
-[badge_unstable]:       https://img.shields.io/badge/unstable-dev--master-orange?style=flat-square
+[badge_unstable]:       https://img.shields.io/badge/unstable-dev--main-orange?style=flat-square
 
 [link_build]:           https://github.com/andrey-helldar/which-color/actions
 
