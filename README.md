@@ -38,6 +38,20 @@ Instead, you may of course manually update your require section and run `compose
 The package can be used without any problems without any framework, connecting the necessary files through the function `require`.
 
 
+### Upgrade from 1.x
+
+In the file `composer.json`, replace `"andrey-helldar/black-or-white-text-color": "^1.0"` with `"andrey-helldar/which-color": "^2.0"` and call the `composer update` command.
+
+If you are referring to classes, change the namespace from `Helldar\BlackOrWhiteTextColor` to `Helldar\WhichColor`.
+
+Replace using the `black_is_better_text_color()` and `black_is_better()` helper with the following code:
+
+```php
+use Helldar\WhichColor\Services\Color;
+
+return (new Color('#ffffff'))->isDark();
+```
+
 ## Using
 
 
