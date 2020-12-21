@@ -26,10 +26,7 @@
     "autoload": {
         "psr-4": {
             "Helldar\\WhichColor\\": "src"
-        },
-        "files": [
-            "src/helpers/helper.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {

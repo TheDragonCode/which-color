@@ -30,30 +30,13 @@ Instead, you may of course manually update your require section and run `compose
 }
 ```
 
-Now you can use a `black_is_better_text_color($hex = '#000000')` helper.
-
 The package can be used without any problems without any framework, connecting the necessary files through the function `require`.
 
 ## Using
 
 The package helps to determine what color it is better to write text over a monotonous color.
 
-To use, you can call the helper function or directly access the class:
-
 ```php
-return black_is_better_text_color('#000000'); // returned `FALSE`. 'A black text color not better for black background'
-return black_is_better_text_color('#ffffff'); // returned `TRUE`. 'A black text color is better for white background'
-
-return black_is_better_text_color('#000'); // returned `FALSE`. 'A black text color not better for black background'
-return black_is_better_text_color('#fff'); // returned `TRUE`. 'A black text color is better for white background'
-
-return black_is_better_text_color([0, 0, 0]); // returned `FALSE`. 'A black text color not better for black background'
-return black_is_better_text_color([255, 255, 255]); // returned `TRUE`. 'A black text color is better for white background'
-
-// Also available a short function:
-return black_is_better('#000000'); // returned `FALSE`. 'A black text color not better for black background'
-return black_is_better('#ffffff'); // returned `TRUE`. 'A black text color is better for white background'
-
 use Helldar\WhichColor\Services\Color;
 
 return (new Color('#000000'))->isLight(); // returned `TRUE`. 'A white text color is better for black background'
