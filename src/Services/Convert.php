@@ -7,7 +7,7 @@ class Convert
     /**
      * Convert a string HEX color code to an RGB array.
      *
-     * @param string $hex
+     * @param  string  $hex
      *
      * @return array
      */
@@ -38,7 +38,7 @@ class Convert
     /**
      * Convert RGB color to HEX code.
      *
-     * @param array $rgb
+     * @param  array  $rgb
      *
      * @return string
      */

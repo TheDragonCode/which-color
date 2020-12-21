@@ -20,7 +20,7 @@ class Map
     }
 
     /**
-     * @param string|null $directory
+     * @param  string|null  $directory
      */
     public function create($directory = null)
     {
@@ -53,9 +53,9 @@ class Map
     }
 
     /**
-     * @param int $red
-     * @param int $green
-     * @param int $blue
+     * @param  int  $red
+     * @param  int  $green
+     * @param  int  $blue
      *
      * @return string
      */
@@ -71,9 +71,9 @@ class Map
     }
 
     /**
-     * @param string $content
-     * @param int $count
-     * @param null $directory
+     * @param  string  $content
+     * @param  int  $count
+     * @param  null  $directory
      */
     private function store($content, $count = 0, $directory = null)
     {
@@ -88,8 +88,8 @@ class Map
     /**
      * Cap a string with a single instance of a given value.
      *
-     * @param string $value
-     * @param string $cap
+     * @param  string  $value
+     * @param  string  $cap
      *
      * @return string
      */

@@ -31,7 +31,7 @@ class Color
     /**
      * Color constructor.
      *
-     * @param string $hex
+     * @param  string  $hex
      */
     public function __construct($hex = '#000000')
     {
@@ -57,7 +57,7 @@ class Color
      */
     public function isWhite()
     {
-        return !$this->isBlack();
+        return ! $this->isBlack();
     }
 
     /**
