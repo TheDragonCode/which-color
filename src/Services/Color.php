@@ -35,7 +35,7 @@ class Color
      */
     public function __construct($hex = '#000000')
     {
-        $this->rgb = (new Convert)->hex2rgb($hex);
+        $this->rgb = (new Convert())->hex2rgb($hex);
     }
 
     /**
