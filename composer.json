@@ -4,7 +4,7 @@
     "type": "library",
     "license": "MIT",
     "homepage": "https://github.com/andrey-helldar/which-color",
-    "keywords": ["black or white text color", "color", "color of text"],
+    "keywords": ["which color", "color", "color of text"],
     "support": {
         "issues": "https://github.com/andrey-helldar/which-color/issues",
         "source": "https://github.com/andrey-helldar/which-color"
