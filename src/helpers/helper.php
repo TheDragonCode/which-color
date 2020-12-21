@@ -1,6 +1,6 @@
 <?php
 
-use Helldar\BlackOrWhiteTextColor\Services\Color;
+use Helldar\WhichColor\Services\Color;
 
 if (! function_exists('black_is_better_text_color')) {
     /**
@@ -12,7 +12,7 @@ if (! function_exists('black_is_better_text_color')) {
      */
     function black_is_better_text_color($hex = '#000000')
     {
-        return (new Color($hex))->isBlack();
+        return (new Color($hex))->isDark();
     }
 }
 
@@ -26,6 +26,6 @@ if (! function_exists('black_is_better')) {
      */
     function black_is_better($hex = '#000000')
     {
-        return (new Color($hex))->isBlack();
+        return (new Color($hex))->isDark();
     }
 }

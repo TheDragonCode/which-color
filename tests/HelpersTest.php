@@ -1,10 +1,10 @@
 <?php
 
-namespace Helldar\BlackOrWhiteTextColor\Tests;
+namespace Tests;
 
 final class HelpersTest extends TestCase
 {
-    public function testIsBlack()
+    public function testIsDark()
     {
         $this->assertTrue(black_is_better_text_color('#ffffff'));
         $this->assertTrue(black_is_better_text_color('#14f078'));
@@ -20,7 +20,7 @@ final class HelpersTest extends TestCase
         $this->assertTrue(black_is_better_text_color('#fafa00'));
     }
 
-    public function testIsWhite()
+    public function testIsLight()
     {
         $this->assertTrue(! black_is_better_text_color());
         $this->assertTrue(! black_is_better_text_color('#000000'));

@@ -1,6 +1,6 @@
 <?php
 
-namespace Helldar\BlackOrWhiteTextColor\Services;
+namespace Helldar\WhichColor\Services;
 
 class Convert
 {

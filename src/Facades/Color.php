@@ -1,13 +1,12 @@
 <?php
 
-namespace Helldar\BlackOrWhiteTextColor\Facades;
+namespace Helldar\WhichColor\Facades;
 
-use Helldar\BlackOrWhiteTextColor\Services\Color as Support;
+use Helldar\WhichColor\Services\Color as Support;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static bool isBlack()
- * @method static bool isWhite()
+ * @method static \Helldar\WhichColor\Services\Color of(string $hex)
  */
 final class Color extends Facade
 {

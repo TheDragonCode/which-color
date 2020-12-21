@@ -1,6 +1,6 @@
 <?php
 
-namespace Helldar\BlackOrWhiteTextColor\Services;
+namespace Helldar\WhichColor\Services;
 
 class Color
 {
@@ -33,17 +33,24 @@ class Color
      *
      * @param  string  $hex
      */
-    public function __construct($hex = '#000000')
+    public function __construct(string $hex = null)
     {
-        $this->rgb = (new Convert())->hex2rgb($hex);
+        if ($hex) {
+            $this->rgb = $this->parseHex($hex);
+        }
+    }
+
+    public function of(string $hex): self
+    {
+        return new self($hex);
     }
 
     /**
-     * Will return TRUE if black is better, or FALSE if white.
+     * Will return TRUE if dark color is better, or FALSE if light.
      *
      * @return bool
      */
-    public function isBlack()
+    public function isDark(): bool
     {
         $font_color = $this->run();
 
@@ -51,13 +58,13 @@ class Color
     }
 
     /**
-     * Will return TRUE if white is better, or FALSE if black.
+     * Will return TRUE if light is better, or FALSE if dark.
      *
      * @return bool
      */
-    public function isWhite()
+    public function isLight(): bool
     {
-        return ! $this->isBlack();
+        return ! $this->isDark();
     }
 
     /**
@@ -65,7 +72,7 @@ class Color
      *
      * @return float
      */
-    private function run()
+    protected function run(): float
     {
         $colors = $this->getColorsWeights();
         $output = 0;
@@ -85,10 +92,12 @@ class Color
         return $output;
     }
 
-    /**
-     * @return array
-     */
-    private function getColorsWeights()
+    protected function parseHex(string $hex = null): array
+    {
+        return (new Convert())->hex2rgb($hex);
+    }
+
+    protected function getColorsWeights(): array
     {
         $path = __DIR__ . '/../config/colors.php';
 

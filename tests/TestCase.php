@@ -1,13 +1,13 @@
 <?php
 
-namespace Helldar\BlackOrWhiteTextColor\Tests;
+namespace Tests;
 
-use Helldar\BlackOrWhiteTextColor\Services\Color;
-use PHPUnit\Framework\TestCase as BaseTestCase;
+use Helldar\WhichColor\Services\Color;
+use Orchestra\Testbench\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {
-    protected function resolve($color)
+    protected function resolve(string $color = null)
     {
         return new Color($color);
     }

@@ -1,11 +1,11 @@
 <?php
 
-namespace Helldar\BlackOrWhiteTextColor\Services;
+namespace Helldar\WhichColor\Services;
 
 class Map
 {
     /**
-     * @var \Helldar\BlackOrWhiteTextColor\Services\Convert
+     * @var \Helldar\WhichColor\Services\Convert
      */
     private $convert;
 
@@ -65,7 +65,7 @@ class Map
         $hex = $this->convert->rgb2hex($rgb);
 
         $rgb_tpl    = implode(',', $rgb);
-        $text_color = (new Color($rgb))->isBlack() ? 'black' : 'white';
+        $text_color = (new Color($rgb))->isDark() ? '#000000' : '#ffffff';
 
         return sprintf($this->template, $rgb_tpl, $text_color, $rgb_tpl, $hex);
     }
