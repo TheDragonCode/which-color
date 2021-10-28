@@ -1,12 +1,8 @@
 # What is the best text color?
 
+<img src="https://preview.dragon-code.pro/TheDragonCode/which-color.svg?brand=php" width="100%" height="320" alt="Which Color"/>
 
 A simple helper, helping to determine what color the text will look better over a monotonous color.
-
-<p align="center">
-    <img src="/.github/home-page-images/screenshot.png?raw=true" alt="What is the best text color"/>
-</p>
-
 
 [![StyleCI Status][badge_styleci]][link_styleci]
 [![Github Workflow Status][badge_build]][link_build]
