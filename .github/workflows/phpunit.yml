@@ -9,7 +9,7 @@ jobs:
         strategy:
             fail-fast: true
             matrix:
-                php: [ "7.1", "7.2", "7.3", "7.4", "8.0" ]
+                php: [ "7.1", "7.2", "7.3", "7.4", "8.0", "8.1" ]
 
         name: PHP ${{ matrix.php }}
 
@@ -24,13 +24,8 @@ jobs:
                     extensions: curl, mbstring, zip, pcntl, pdo, pdo_sqlite, iconv
                     coverage: xdebug
 
-            -   name: Composer self update
-                run: composer self-update
-
             -   name: Install dependencies
                 run: composer update --prefer-dist --no-progress --no-interaction --no-suggest
 
             -   name: Execute tests
-                run: |
-                    mkdir -p build/logs
-                    vendor/bin/phpunit
+                run: sudo vendor/bin/phpunit
