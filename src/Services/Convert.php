@@ -1,17 +1,17 @@
 <?php
 
-namespace Helldar\WhichColor\Services;
+namespace DragonCode\WhichColor\Services;
 
 class Convert
 {
     /**
      * Convert a string HEX color code to an RGB array.
      *
-     * @param  string  $hex
+     * @param  string|null  $hex
      *
      * @return array
      */
-    public function hex2rgb($hex = '#000000')
+    public function hex2rgb($hex = '#000000'): array
     {
         if (is_array($hex)) {
             return $hex;
@@ -42,7 +42,7 @@ class Convert
      *
      * @return string
      */
-    public function rgb2hex($rgb = [])
+    public function rgb2hex(array $rgb = []): string
     {
         $f = function ($x) {
             return str_pad(dechex($x), 2, '0', STR_PAD_LEFT);

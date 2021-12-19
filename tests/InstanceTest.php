@@ -2,9 +2,9 @@
 
 namespace Tests;
 
-use Helldar\WhichColor\Services\Color;
+use DragonCode\WhichColor\Services\Color;
 
-class ColorTest extends TestCase
+class InstanceTest extends TestCase
 {
     public function testInstance()
     {
