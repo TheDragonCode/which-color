@@ -4,11 +4,10 @@
 
 A simple helper, helping to determine what color the text will look better over a monotonous color.
 
-[![StyleCI Status][badge_styleci]][link_styleci]
-[![Github Workflow Status][badge_build]][link_build]
 [![Stable Version][badge_stable]][link_packagist]
 [![Unstable Version][badge_unstable]][link_packagist]
 [![Total Downloads][badge_downloads]][link_packagist]
+[![Github Workflow Status][badge_build]][link_build]
 [![License][badge_license]][link_license]
 
 
@@ -18,7 +17,7 @@ A simple helper, helping to determine what color the text will look better over 
 To get the latest version of package, simply require the project using [Composer](https://getcomposer.org):
 
 ```
-composer require andrey-helldar/which-color
+composer require dragon-code/which-color
 ```
 
 Instead, you may of course manually update your require section and run `composer update` if you so choose:
@@ -26,7 +25,7 @@ Instead, you may of course manually update your require section and run `compose
 ```json
 {
     "require": {
-        "andrey-helldar/which-color": "^2.0"
+        "dragon-code/which-color": "^3.0"
     }
 }
 ```
@@ -34,19 +33,11 @@ Instead, you may of course manually update your require section and run `compose
 The package can be used without any problems without any framework, connecting the necessary files through the function `require`.
 
 
-### Upgrade from 1.x
+### Upgrade from `andrey-helldar/which-color`
 
-In the file `composer.json`, replace `"andrey-helldar/black-or-white-text-color": "^1.0"` with `"andrey-helldar/which-color": "^2.0"` and call the `composer update` command.
-
-If you are referring to classes, change the namespace from `Helldar\BlackOrWhiteTextColor` to `Helldar\WhichColor`.
-
-Replace using the `black_is_better_text_color()` and `black_is_better()` helper with the following code:
-
-```php
-use Helldar\WhichColor\Services\Color;
-
-return (new Color('#ffffff'))->isDark();
-```
+1. Replace `"andrey-helldar/which-color": "^2.0"` with `"dragon-code/which-color": "^3.0"` in the `composer.json` file;
+2. Replace the `DragonCode\WhichColor` namespace prefix with `DragonCode\WhichColor` in your application;
+3. Call the `composer update` console command.
 
 ## Using
 
@@ -54,7 +45,7 @@ return (new Color('#ffffff'))->isDark();
 The package helps to determine what color it is better to write text over a monotonous color.
 
 ```php
-use Helldar\WhichColor\Services\Color;
+use DragonCode\WhichColor\Services\Color;
 
 return (new Color('#000000'))->isLight(); // returned `TRUE`. 'A white text color is better for black background'
 return (new Color('#ffffff'))->isDark(); // returned `TRUE`. 'A black text color is better for white background'
@@ -68,7 +59,7 @@ return (new Color())->of('#ffffff')->isDark(); // returned `TRUE`. 'A black text
 Inside Laravel or Lumen applications, you can use the `Color` facade:
 
 ```php
-use Helldar\WhichColor\Facades\Color;
+use DragonCode\WhichColor\Facades\Color;
 
 $color = Color::of('#000000');
 $color->isLight(); // returned `TRUE`. 'A light text color is better for dark background'
@@ -89,22 +80,18 @@ $color->isDark(); // returned `TRUE`. 'A light text color is better for dark bac
 This package is licensed under the [MIT License](LICENSE).
 
 
-[badge_build]:          https://img.shields.io/github/workflow/status/andrey-helldar/which-color/phpunit?style=flat-square
+[badge_build]:          https://img.shields.io/github/workflow/status/TheDragonCode/which-color/phpunit?style=flat-square
 
-[badge_downloads]:      https://img.shields.io/packagist/dt/andrey-helldar/which-color.svg?style=flat-square
+[badge_downloads]:      https://img.shields.io/packagist/dt/dragon-code/which-color.svg?style=flat-square
 
-[badge_license]:        https://img.shields.io/packagist/l/andrey-helldar/which-color.svg?style=flat-square
+[badge_license]:        https://img.shields.io/packagist/l/dragon-code/which-color.svg?style=flat-square
 
-[badge_stable]:         https://img.shields.io/github/v/release/andrey-helldar/which-color?label=stable&style=flat-square
-
-[badge_styleci]:        https://styleci.io/repos/142359733/shield
+[badge_stable]:         https://img.shields.io/github/v/release/TheDragonCode/which-color?label=stable&style=flat-square
 
 [badge_unstable]:       https://img.shields.io/badge/unstable-dev--main-orange?style=flat-square
 
-[link_build]:           https://github.com/andrey-helldar/which-color/actions
+[link_build]:           https://github.com/TheDragonCode/which-color/actions
 
 [link_license]:         LICENSE
 
-[link_packagist]:       https://packagist.org/packages/andrey-helldar/which-color
-
-[link_styleci]:         https://github.styleci.io/repos/142359733
+[link_packagist]:       https://packagist.org/packages/dragon-code/which-color

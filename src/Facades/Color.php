@@ -1,16 +1,16 @@
 <?php
 
-namespace Helldar\WhichColor\Facades;
+namespace DragonCode\WhichColor\Facades;
 
-use Helldar\WhichColor\Services\Color as Support;
-use Illuminate\Support\Facades\Facade;
+use DragonCode\Support\Facades\Facade;
+use DragonCode\WhichColor\Services\Color as Support;
 
 /**
- * @method static \Helldar\WhichColor\Services\Color of(string $hex)
+ * @method static Support of(string $hex)
  */
-final class Color extends Facade
+class Color extends Facade
 {
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
         return Support::class;
     }

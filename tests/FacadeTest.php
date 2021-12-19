@@ -2,10 +2,10 @@
 
 namespace Tests;
 
-use Helldar\WhichColor\Facades\Color;
-use Helldar\WhichColor\Services\Color as Service;
+use DragonCode\WhichColor\Facades\Color;
+use DragonCode\WhichColor\Services\Color as Service;
 
-final class LaravelTest extends TestCase
+class FacadeTest extends TestCase
 {
     public function testInstance()
     {

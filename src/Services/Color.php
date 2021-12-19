@@ -1,6 +1,6 @@
 <?php
 
-namespace Helldar\WhichColor\Services;
+namespace DragonCode\WhichColor\Services;
 
 class Color
 {
@@ -31,9 +31,9 @@ class Color
     /**
      * Color constructor.
      *
-     * @param  string  $hex
+     * @param  string|null  $hex
      */
-    public function __construct(string $hex = null)
+    public function __construct($hex = null)
     {
         if ($hex) {
             $this->rgb = $this->parseHex($hex);
@@ -92,7 +92,7 @@ class Color
         return $output;
     }
 
-    protected function parseHex(string $hex = null): array
+    protected function parseHex($hex = null): array
     {
         return (new Convert())->hex2rgb($hex);
     }

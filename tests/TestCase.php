@@ -2,12 +2,12 @@
 
 namespace Tests;
 
-use Helldar\WhichColor\Services\Color;
-use Orchestra\Testbench\TestCase as BaseTestCase;
+use DragonCode\WhichColor\Services\Color;
+use PHPUnit\Framework\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
 {
-    protected function resolve(string $color = null)
+    protected function resolve(string $color = null): Color
     {
         return new Color($color);
     }

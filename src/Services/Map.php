@@ -1,11 +1,11 @@
 <?php
 
-namespace Helldar\WhichColor\Services;
+namespace DragonCode\WhichColor\Services;
 
 class Map
 {
     /**
-     * @var \Helldar\WhichColor\Services\Convert
+     * @var \DragonCode\WhichColor\Services\Convert
      */
     private $convert;
 
@@ -22,7 +22,7 @@ class Map
     /**
      * @param  string|null  $directory
      */
-    public function create($directory = null)
+    public function create(?string $directory = null)
     {
         $result = '';
         $step   = 10;
@@ -59,7 +59,7 @@ class Map
      *
      * @return string
      */
-    private function block($red = 0, $green = 0, $blue = 0)
+    private function block(int $red = 0, int $green = 0, int $blue = 0): string
     {
         $rgb = [$red, $green, $blue];
         $hex = $this->convert->rgb2hex($rgb);
