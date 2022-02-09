@@ -4,14 +4,10 @@ namespace DragonCode\WhichColor\Services;
 
 class Map
 {
-    /**
-     * @var \DragonCode\WhichColor\Services\Convert
-     */
+    /** @var \DragonCode\WhichColor\Services\Convert */
     private $convert;
 
-    /**
-     * @var string
-     */
+    /** @var string */
     private $template = '<div style="background-color: rgb(%s); color: %s;"><p>rgb(%s)</p><p>%s</p></div>';
 
     public function __construct()
@@ -20,7 +16,7 @@ class Map
     }
 
     /**
-     * @param  string|null  $directory
+     * @param string|null $directory
      */
     public function create(?string $directory = null)
     {
@@ -28,23 +24,23 @@ class Map
         $step   = 10;
         $count  = 0;
 
-        for ($r = 0; $r <= 255; $r++) {
+        for ($r = 0; $r <= 255; ++$r) {
             if (($r % $step) !== 0) {
                 continue;
             }
 
-            for ($g = 0; $g <= 255; $g++) {
+            for ($g = 0; $g <= 255; ++$g) {
                 if (($g % $step) !== 0) {
                     continue;
                 }
 
-                for ($b = 0; $b <= 255; $b++) {
+                for ($b = 0; $b <= 255; ++$b) {
                     if (($b % $step) !== 0) {
                         continue;
                     }
 
                     $result .= $this->block($r, $g, $b);
-                    $count++;
+                    ++$count;
                 }
             }
         }
@@ -53,9 +49,9 @@ class Map
     }
 
     /**
-     * @param  int  $red
-     * @param  int  $green
-     * @param  int  $blue
+     * @param int $red
+     * @param int $green
+     * @param int $blue
      *
      * @return string
      */
@@ -71,9 +67,9 @@ class Map
     }
 
     /**
-     * @param  string  $content
-     * @param  int  $count
-     * @param  null  $directory
+     * @param string $content
+     * @param int $count
+     * @param null $directory
      */
     private function store($content, $count = 0, $directory = null)
     {
@@ -88,8 +84,8 @@ class Map
     /**
      * Cap a string with a single instance of a given value.
      *
-     * @param  string  $value
-     * @param  string  $cap
+     * @param string $value
+     * @param string $cap
      *
      * @return string
      */

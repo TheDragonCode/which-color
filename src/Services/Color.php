@@ -23,15 +23,13 @@ class Color
      */
     private $weight = 0.00088;
 
-    /**
-     * @var array
-     */
+    /** @var array */
     private $rgb;
 
     /**
      * Color constructor.
      *
-     * @param  string|null  $hex
+     * @param string|null $hex
      */
     public function __construct($hex = null)
     {
@@ -83,7 +81,7 @@ class Color
 
             foreach ($color['weights'] as $keyColor => $valueColor) {
                 $sum += $valueColor * $this->rgb[$i];
-                $i++;
+                ++$i;
             }
 
             $output += (1 / (1 + abs($sum)));

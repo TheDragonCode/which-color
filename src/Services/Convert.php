@@ -7,7 +7,7 @@ class Convert
     /**
      * Convert a string HEX color code to an RGB array.
      *
-     * @param  string|null  $hex
+     * @param string|null $hex
      *
      * @return array
      */
@@ -25,7 +25,7 @@ class Convert
         if (strlen($hex) === 3) {
             $hex_new = '';
 
-            for ($i = 0; $i < 3; $i++) {
+            for ($i = 0; $i < 3; ++$i) {
                 $hex_new .= $hex[$i] . $hex[$i];
             }
 
@@ -38,7 +38,7 @@ class Convert
     /**
      * Convert RGB color to HEX code.
      *
-     * @param  array  $rgb
+     * @param array $rgb
      *
      * @return string
      */
