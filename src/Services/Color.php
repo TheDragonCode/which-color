@@ -29,7 +29,7 @@ class Color
     protected RGB $rgb;
 
     public function __construct(
-        protected Weight    $weights = new Weight(),
+        protected Weight $weights = new Weight(),
         protected Converter $convert = new Converter()
     ) {
     }
@@ -48,7 +48,7 @@ class Color
      */
     public function darkIsBetter(): bool
     {
-        return $this->weights->getSum($this->rgb) < $this->weight;
+        return $this->weight > $this->weights->getSum($this->rgb);
     }
 
     /**

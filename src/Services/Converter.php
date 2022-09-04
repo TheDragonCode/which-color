@@ -6,6 +6,7 @@ use DragonCode\Support\Facades\Helpers\Arr;
 use DragonCode\Support\Facades\Helpers\Str;
 use DragonCode\Support\Facades\Instances\Instance;
 use DragonCode\WhichColor\Dto\RGB;
+use ReflectionException;
 
 class Converter
 {
@@ -36,7 +37,7 @@ class Converter
      *
      * @param array|\DragonCode\WhichColor\Dto\RGB $rgb
      *
-     * @throws \ReflectionException
+     * @throws ReflectionException
      *
      * @return string
      */
@@ -63,10 +64,10 @@ class Converter
 
     protected function parseArray(array $hex): array
     {
-        if (isset($hex['r']) && isset($hex['g']) && isset($hex['b'])) {
+        if (isset($hex['r'], $hex['g'], $hex['b'])) {
             ['r' => $red, 'g' => $green, 'b' => $blue] = $hex;
         }
-        elseif (isset($hex['red']) && isset($hex['green']) && isset($hex['blue'])) {
+        elseif (isset($hex['red'], $hex['green'], $hex['blue'])) {
             ['red' => $red, 'green' => $green, 'blue' => $blue] = $hex;
         }
         else {
