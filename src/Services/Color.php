@@ -2,6 +2,9 @@
 
 namespace DragonCode\WhichColor\Services;
 
+use DragonCode\WhichColor\Dto\RGB;
+use DragonCode\WhichColor\Helpers\Weight;
+
 class Color
 {
     /**
@@ -21,26 +24,21 @@ class Color
      *
      * @var float
      */
-    private $weight = 0.00088;
+    protected float $weight = 0.00088;
 
-    /** @var array */
-    private $rgb;
+    protected RGB $rgb;
 
-    /**
-     * Color constructor.
-     *
-     * @param string|null $hex
-     */
-    public function __construct($hex = null)
-    {
-        if ($hex) {
-            $this->rgb = $this->parseHex($hex);
-        }
+    public function __construct(
+        protected Weight    $weights = new Weight(),
+        protected Converter $convert = new Converter()
+    ) {
     }
 
-    public function of(string $hex): self
+    public function of(array|string|RGB|null $hex = null): self
     {
-        return new self($hex);
+        $instance = new static();
+
+        return $instance->setHex($hex);
     }
 
     /**
@@ -48,11 +46,9 @@ class Color
      *
      * @return bool
      */
-    public function isDark(): bool
+    public function darkIsBetter(): bool
     {
-        $font_color = $this->run();
-
-        return $font_color < $this->weight;
+        return $this->weights->getSum($this->rgb) < $this->weight;
     }
 
     /**
@@ -60,45 +56,22 @@ class Color
      *
      * @return bool
      */
-    public function isLight(): bool
+    public function lightIsBetter(): bool
     {
-        return ! $this->isDark();
+        return ! $this->darkIsBetter();
     }
 
-    /**
-     * Neuron network, which determines the color of the text for a specific background.
-     *
-     * @return float
-     */
-    protected function run(): float
+    public function setHex(array|string|RGB|null $hex): self
     {
-        $colors = $this->getColorsWeights();
-        $output = 0;
-
-        foreach ($colors as $color) {
-            $sum = $color['bias'];
-            $i   = 0;
-
-            foreach ($color['weights'] as $keyColor => $valueColor) {
-                $sum += $valueColor * $this->rgb[$i];
-                ++$i;
-            }
-
-            $output += (1 / (1 + abs($sum)));
+        if ($hex) {
+            $this->rgb = $this->parseHex($hex);
         }
 
-        return $output;
+        return $this;
     }
 
-    protected function parseHex($hex = null): array
+    protected function parseHex(array|string|RGB $hex): RGB
     {
-        return (new Convert())->hex2rgb($hex);
-    }
-
-    protected function getColorsWeights(): array
-    {
-        $path = __DIR__ . '/../config/colors.php';
-
-        return include $path;
+        return $this->convert->hex2rgb($hex);
     }
 }

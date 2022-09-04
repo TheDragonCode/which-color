@@ -25,52 +25,47 @@ Instead, you may of course manually update your require section and run `compose
 ```json
 {
     "require": {
-        "dragon-code/which-color": "^3.0"
+        "dragon-code/which-color": "^4.0"
     }
 }
 ```
 
-The package can be used without any problems without any framework, connecting the necessary files through the function `require`.
-
-
-### Upgrade from `andrey-helldar/which-color`
-
-1. Replace `"andrey-helldar/which-color": "^2.0"` with `"dragon-code/which-color": "^3.0"` in the `composer.json` file;
-2. Replace the `DragonCode\WhichColor` namespace prefix with `DragonCode\WhichColor` in your application;
-3. Call the `composer update` console command.
-
 ## Using
-
 
 The package helps to determine what color it is better to write text over a monotonous color.
 
 ```php
-use DragonCode\WhichColor\Services\Color;
-
-return (new Color('#000000'))->isLight(); // returned `TRUE`. 'A white text color is better for black background'
-return (new Color('#ffffff'))->isDark(); // returned `TRUE`. 'A black text color is better for white background'
-
-return (new Color())->of('#000000')->isLight(); // returned `TRUE`. 'A white text color is better for black background'
-return (new Color())->of('#ffffff')->isDark(); // returned `TRUE`. 'A black text color is better for white background'
-```
-
-### Laravel / Lumen Frameworks
-
-Inside Laravel or Lumen applications, you can use the `Color` facade:
-
-```php
 use DragonCode\WhichColor\Facades\Color;
 
-$color = Color::of('#000000');
-$color->isLight(); // returned `TRUE`. 'A light text color is better for dark background'
-$color->isDark(); // returned `FALSE`. 'A dark text color is better for light background'
+return Color::of('#000000')->lightIsBetter(); // returned `true`. A white text color is better for black background.
+return Color::of('#ffffff')->darkIsBetter(); // returned `true`. A black text color is better for white background.
 
-$color = Color::of('#ffffff')->isDark();
-$color->isLight(); // returned `TRUE`. 'A dark text color is better for light background'
-$color->isDark(); // returned `TRUE`. 'A light text color is better for dark background'
+return Color::of('#000000')->lightIsBetter(); // returned `true`. A white text color is better for black background.
+return Color::of('#ffffff')->darkIsBetter(); // returned `true`. A black text color is better for white background.
 ```
 
-## Color map
+You can also use the converter:
+
+```php
+use DragonCode\WhichColor\Services\Converter;
+
+$converted = new Converter();
+
+$rgb = $converted->hex2rgb('#fa000a'); // RGB object with [250, 0, 10]
+// $rgb->red; // 250
+// $rgb->green; // 0
+// $rgb->blue; // 10
+// $rgb->toArray(); // [250, 0, 10]
+
+$converted->hex2rgb('#f5a'); // RGB object with [255, 85, 170]
+
+$converted->rgb2hex($rgb); // '#fa000a'
+$converted->rgb2hex([250, 0, 10]); // '#fa000a'
+$converted->rgb2hex(['red' => 250, 'green' => 0, 'blue' => 10]); // '#fa000a'
+$converted->rgb2hex(['r' => 250, 'g' => 0, 'b' => 10]); // '#fa000a'
+```
+
+## Simple Color Map
 
 ![map of colors](https://user-images.githubusercontent.com/10347617/43231090-85dfba92-9073-11e8-9dbc-d2968b5ef1a2.png)
 
