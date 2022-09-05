@@ -65,7 +65,7 @@ $converted->rgb2hex(['red' => 250, 'green' => 0, 'blue' => 10]); // '#fa000a'
 $converted->rgb2hex(['r' => 250, 'g' => 0, 'b' => 10]); // '#fa000a'
 ```
 
-## Simple Color Map
+## Example
 
 ![map of colors](https://user-images.githubusercontent.com/10347617/43231090-85dfba92-9073-11e8-9dbc-d2968b5ef1a2.png)
 
