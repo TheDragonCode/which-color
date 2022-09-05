@@ -58,6 +58,7 @@ $rgb = $converted->hex2rgb('#fa000a'); // RGB object with [250, 0, 10]
 // $rgb->toArray(); // [250, 0, 10]
 
 $converted->hex2rgb('#f5a'); // RGB object with [255, 85, 170]
+$converted->hex2rgb('#ff55aa'); // RGB object with [255, 85, 170]
 
 $converted->rgb2hex($rgb); // '#fa000a'
 $converted->rgb2hex([250, 0, 10]); // '#fa000a'
