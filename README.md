@@ -40,8 +40,8 @@ use DragonCode\WhichColor\Facades\Color;
 return Color::of('#000000')->lightIsBetter(); // returned `true`. A white text color is better for black background.
 return Color::of('#ffffff')->darkIsBetter(); // returned `true`. A black text color is better for white background.
 
-return Color::of('#ffffff')->lightIsBetter(); // returned `false`. Light color is not the best for light background.
-return Color::of('#000000')->darkIsBetter(); // returned `false`. Dark color is not the best for dark background.
+return Color::of('#ffffff')->lightIsBetter(); // returned `false`. White color is not the best for white background.
+return Color::of('#000000')->darkIsBetter(); // returned `false`. Black color is not the best for black background.
 ```
 
 You can also use the converter:
