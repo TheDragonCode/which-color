@@ -76,7 +76,7 @@ $converted->rgb2hex(['r' => 250, 'g' => 0, 'b' => 10]); // '#fa000a'
 This package is licensed under the [MIT License](LICENSE).
 
 
-[badge_build]:          https://img.shields.io/github/workflow/status/TheDragonCode/which-color/phpunit?style=flat-square
+[badge_build]:          https://img.shields.io/github/actions/workflow/status/TheDragonCode/which-color/phpunit.yml?style=flat-square
 
 [badge_downloads]:      https://img.shields.io/packagist/dt/dragon-code/which-color.svg?style=flat-square
 
