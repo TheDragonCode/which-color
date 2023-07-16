@@ -12,12 +12,8 @@ class Converter
 {
     /**
      * Convert a string HEX color code to an RGB array.
-     *
-     * @param array|string|\DragonCode\WhichColor\Dto\RGB|null $hex
-     *
-     * @return \DragonCode\WhichColor\Dto\RGB
      */
-    public function hex2rgb(array|string|RGB|null $hex = '#000000'): RGB
+    public function hex2rgb(array|RGB|string|null $hex = '#000000'): RGB
     {
         if (Instance::of($hex, RGB::class)) {
             return $hex;
@@ -35,11 +31,7 @@ class Converter
     /**
      * Convert RGB color to HEX code.
      *
-     * @param array|\DragonCode\WhichColor\Dto\RGB $rgb
-     *
      * @throws ReflectionException
-     *
-     * @return string
      */
     public function rgb2hex(array|RGB $rgb = []): string
     {

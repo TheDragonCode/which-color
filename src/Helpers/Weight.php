@@ -44,10 +44,6 @@ class Weight
 
     /**
      * Neuron network, which determines the color of the text for a specific background.
-     *
-     * @param \DragonCode\WhichColor\Dto\RGB $rgb
-     *
-     * @return void
      */
     protected function calc(RGB $rgb): void
     {
