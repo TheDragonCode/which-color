@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace DragonCode\WhichColor\Services;
 
-use DragonCode\WhichColor\Dto\RGB;
+use DragonCode\WhichColor\Data\RGB;
 use DragonCode\WhichColor\Helpers\Weight;
 
 class Color
