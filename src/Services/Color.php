@@ -12,17 +12,17 @@ class Color
     /**
      * Coefficient / Number of mistakes / Count of items to check.
      *
-     * 0.00100   / 14%   / 125
-     * 0.00079   / 11%   / 125
-     * 0.00082   / 1.13% / 1331
-     * 0.00084   / 0.45% / 1331
-     * 0.000845  / 0.23% / 1331
-     * 0.00085   / 0.23% / 1331
-     * 0.00086   / 0.15% / 1331
-     * 0.00087   / 0.15% / 1331
-     * 0.00088   / 0.00% / 1331
-     * 0.00096   / 16%   / 125
-     * 0.00092   / 17%   / 125
+     * - 0.00100   / 14%   / 125
+     * - 0.00079   / 11%   / 125
+     * - 0.00082   / 1.13% / 1331
+     * - 0.00084   / 0.45% / 1331
+     * - 0.000845  / 0.23% / 1331
+     * - 0.00085   / 0.23% / 1331
+     * - 0.00086   / 0.15% / 1331
+     * - 0.00087   / 0.15% / 1331
+     * - 0.00088   / 0.00% / 1331
+     * - 0.00096   / 16%   / 125
+     * - 0.00092   / 17%   / 125
      */
     protected float $weight = 0.00088;
 
@@ -33,11 +33,9 @@ class Color
         protected Converter $convert = new Converter
     ) {}
 
-    public function of(array|RGB|string|null $hex = null): self
+    public function of(array|RGB|string|null $hex = null): static
     {
-        $instance = new static;
-
-        return $instance->setHex($hex);
+        return (new static)->setHex($hex);
     }
 
     /**
@@ -56,7 +54,7 @@ class Color
         return ! $this->darkIsBetter();
     }
 
-    public function setHex(array|RGB|string|null $hex): self
+    public function setHex(array|RGB|string|null $hex): static
     {
         if ($hex) {
             $this->rgb = $this->parseHex($hex);
