@@ -21,20 +21,17 @@ class Color
      * 0.00088   / 0.00% / 1331
      * 0.00096   / 16%   / 125
      * 0.00092   / 17%   / 125
-     *
-     * @var float
      */
     protected float $weight = 0.00088;
 
     protected RGB $rgb;
 
     public function __construct(
-        protected Weight    $weights = new Weight(),
+        protected Weight $weights = new Weight(),
         protected Converter $convert = new Converter()
-    ) {
-    }
+    ) {}
 
-    public function of(array|string|RGB|null $hex = null): self
+    public function of(array|RGB|string|null $hex = null): self
     {
         $instance = new static();
 
@@ -43,25 +40,21 @@ class Color
 
     /**
      * Will return TRUE if dark color is better, or FALSE if light.
-     *
-     * @return bool
      */
     public function darkIsBetter(): bool
     {
-        return $this->weights->getSum($this->rgb) < $this->weight;
+        return $this->weight > $this->weights->getSum($this->rgb);
     }
 
     /**
      * Will return TRUE if light is better, or FALSE if dark.
-     *
-     * @return bool
      */
     public function lightIsBetter(): bool
     {
         return ! $this->darkIsBetter();
     }
 
-    public function setHex(array|string|RGB|null $hex): self
+    public function setHex(array|RGB|string|null $hex): self
     {
         if ($hex) {
             $this->rgb = $this->parseHex($hex);
@@ -70,7 +63,7 @@ class Color
         return $this;
     }
 
-    protected function parseHex(array|string|RGB $hex): RGB
+    protected function parseHex(array|RGB|string $hex): RGB
     {
         return $this->convert->hex2rgb($hex);
     }
