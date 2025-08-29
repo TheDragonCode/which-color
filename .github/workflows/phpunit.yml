@@ -1,4 +1,4 @@
-name: phpunit
+name: Tests
 on: [ push ]
 
 jobs:
