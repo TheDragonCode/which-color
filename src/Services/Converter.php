@@ -7,7 +7,7 @@ namespace DragonCode\WhichColor\Services;
 use DragonCode\Support\Facades\Helpers\Arr;
 use DragonCode\Support\Facades\Helpers\Str;
 use DragonCode\Support\Facades\Instances\Instance;
-use DragonCode\WhichColor\Dto\RGB;
+use DragonCode\WhichColor\Data\RGB;
 use ReflectionException;
 
 class Converter
@@ -27,7 +27,7 @@ class Converter
 
         [$red, $green, $blue] = $this->parseArray($hex);
 
-        return RGB::make(compact('red', 'green', 'blue'));
+        return new RGB($red, $green, $blue);
     }
 
     /**
