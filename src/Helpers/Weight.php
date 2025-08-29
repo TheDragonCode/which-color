@@ -6,6 +6,8 @@ namespace DragonCode\WhichColor\Helpers;
 
 use DragonCode\WhichColor\Data\RGB;
 
+use function abs;
+
 class Weight
 {
     protected array $values = [

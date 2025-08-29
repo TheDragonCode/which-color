@@ -4,11 +4,18 @@ declare(strict_types=1);
 
 namespace DragonCode\WhichColor\Services;
 
+use const STR_PAD_LEFT;
+
 use DragonCode\Support\Facades\Helpers\Arr;
 use DragonCode\Support\Facades\Helpers\Str;
 use DragonCode\Support\Facades\Instances\Instance;
 use DragonCode\WhichColor\Data\RGB;
-use ReflectionException;
+
+use function dechex;
+use function hexdec;
+use function is_string;
+use function str_pad;
+use function str_split;
 
 class Converter
 {
@@ -32,13 +39,11 @@ class Converter
 
     /**
      * Convert RGB color to HEX code.
-     *
-     * @throws ReflectionException
      */
     public function rgb2hex(array|RGB $rgb = []): string
     {
         return Arr::of($this->hex2rgb($rgb)->toArray())
-            ->map(fn ($x) => str_pad(dechex($x), 2, '0', STR_PAD_LEFT))
+            ->map(static fn ($x) => str_pad(dechex($x), 2, '0', STR_PAD_LEFT))
             ->implode('')
             ->prepend('#')
             ->toString();
@@ -48,11 +53,11 @@ class Converter
     {
         $hex = Str::after($hex, '#');
 
-        $is_short = Str::length($hex) === 3;
+        $short = Str::length($hex) === 3;
 
         return array_map(
-            fn ($x) => hexdec($is_short ? $x . $x : $x),
-            str_split($hex, $is_short ? 1 : 2)
+            static fn ($x) => hexdec($short ? $x . $x : $x),
+            str_split($hex, $short ? 1 : 2)
         );
     }
 
