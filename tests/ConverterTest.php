@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests;
 
 use DragonCode\WhichColor\Services\Converter;
@@ -50,6 +52,6 @@ class ConverterTest extends TestCase
 
     protected function converter(): Converter
     {
-        return new Converter();
+        return new Converter;
     }
 }

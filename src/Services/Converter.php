@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DragonCode\WhichColor\Services;
 
 use DragonCode\Support\Facades\Helpers\Arr;
@@ -58,11 +60,9 @@ class Converter
     {
         if (isset($hex['r'], $hex['g'], $hex['b'])) {
             ['r' => $red, 'g' => $green, 'b' => $blue] = $hex;
-        }
-        elseif (isset($hex['red'], $hex['green'], $hex['blue'])) {
+        } elseif (isset($hex['red'], $hex['green'], $hex['blue'])) {
             ['red' => $red, 'green' => $green, 'blue' => $blue] = $hex;
-        }
-        else {
+        } else {
             [$red, $green, $blue] = $hex;
         }
 

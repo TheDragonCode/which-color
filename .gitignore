@@ -1,6 +1,7 @@
 .idea/
 vendor/
 
+*.bak
 *.cache
 *.clover
 *.orig

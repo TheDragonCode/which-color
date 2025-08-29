@@ -15,7 +15,7 @@ A simple helper, helping to determine what color the text will look better over 
 
 To get the latest version of package, simply require the project using [Composer](https://getcomposer.org):
 
-```
+```bash
 composer require dragon-code/which-color
 ```
 

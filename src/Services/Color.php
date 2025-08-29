@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DragonCode\WhichColor\Services;
 
 use DragonCode\WhichColor\Dto\RGB;
@@ -27,13 +29,13 @@ class Color
     protected RGB $rgb;
 
     public function __construct(
-        protected Weight $weights = new Weight(),
-        protected Converter $convert = new Converter()
+        protected Weight $weights = new Weight,
+        protected Converter $convert = new Converter
     ) {}
 
     public function of(array|RGB|string|null $hex = null): self
     {
-        $instance = new static();
+        $instance = new static;
 
         return $instance->setHex($hex);
     }

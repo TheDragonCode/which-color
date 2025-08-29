@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DragonCode\WhichColor\Facades;
 
 use DragonCode\Support\Facades\Facade;
