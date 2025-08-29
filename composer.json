@@ -38,6 +38,7 @@
         "dragon-code/support": "^6.0"
     },
     "require-dev": {
+        "dragon-code/codestyler": "^6.2",
         "phpunit/phpunit": "^10.0 || ^11.0 || ^12.0",
         "symfony/var-dumper": "^6.0 || ^7.0"
     },
@@ -61,5 +62,13 @@
         },
         "preferred-install": "dist",
         "sort-packages": true
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "vendor/bin/codestyle pint 8.2",
+            "vendor/bin/codestyle editorconfig",
+            "composer normalize"
+        ],
+        "style": "vendor/bin/pint"
     }
 }

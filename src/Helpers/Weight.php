@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace DragonCode\WhichColor\Helpers;
 
 use DragonCode\WhichColor\Dto\RGB;
