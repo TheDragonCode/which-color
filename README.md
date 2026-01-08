@@ -1,6 +1,6 @@
 # What is the best text color?
 
-<img src="https://preview.dragon-code.pro/TheDragonCode/which-color.svg?brand=php" alt="Which Color"/>
+<img src="https://banners.beyondco.de/Which%20Color.png?theme=light&packageManager=composer+require&packageName=dragon-code%2Fwhich-color&pattern=topography&style=style_2&description=by+The+Dragon+Code&md=1&showWatermark=1&fontSize=100px&images=https%3A%2F%2Fwww.php.net%2Fimages%2Flogos%2Fnew-php-logo.svg" alt="Which Color"/>
 
 A simple helper, helping to determine what color the text will look better over a monotonous color.
 
