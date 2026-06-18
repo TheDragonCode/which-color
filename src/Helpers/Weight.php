@@ -46,9 +46,7 @@ class Weight
         return $this->output;
     }
 
-    /**
-     * Neuron network, which determines the color of the text for a specific background.
-     */
+    /** Neuron network, which determines the color of the text for a specific background. */
     protected function calc(RGB $rgb): void
     {
         foreach ($this->values as $value) {
