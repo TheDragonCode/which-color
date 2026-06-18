@@ -19,9 +19,7 @@ use function str_split;
 
 class Converter
 {
-    /**
-     * Convert a string HEX color code to an RGB array.
-     */
+    /** Convert a string HEX color code to an RGB array. */
     public function hex2rgb(array|RGB|string|null $hex = '#000000'): RGB
     {
         if (Instance::of($hex, RGB::class)) {
@@ -37,9 +35,7 @@ class Converter
         return new RGB($red, $green, $blue);
     }
 
-    /**
-     * Convert RGB color to HEX code.
-     */
+    /** Convert RGB color to HEX code. */
     public function rgb2hex(array|RGB $rgb = []): string
     {
         return Arr::of($this->hex2rgb($rgb)->toArray())

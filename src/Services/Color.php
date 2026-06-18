@@ -38,17 +38,13 @@ class Color
         return (new static)->setHex($hex);
     }
 
-    /**
-     * Will return TRUE if dark color is better, or FALSE if light.
-     */
+    /** Will return TRUE if dark color is better, or FALSE if light. */
     public function darkIsBetter(): bool
     {
         return $this->weight > $this->weights->getSum($this->rgb);
     }
 
-    /**
-     * Will return TRUE if light is better, or FALSE if dark.
-     */
+    /** Will return TRUE if light is better, or FALSE if dark. */
     public function lightIsBetter(): bool
     {
         return ! $this->darkIsBetter();
